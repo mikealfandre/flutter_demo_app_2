@@ -12,7 +12,7 @@ class Bones extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('[Bones Widget] build()');
+    
     return Column(
       children: bones
           .map((el) => Card(
