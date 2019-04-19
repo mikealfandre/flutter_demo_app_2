@@ -8,7 +8,7 @@ import './bones_manager.dart';
 //   runApp(OrefApp());
 // }
 
-//Can write as arrow function as well.
+//Can write as arrow function as well. This is what writes the code to the screen.
 void main() => runApp(OrefApp());
 
 //Stateless widget cannot change, or accept external data, etc. We need to use a stateful Widget here.
@@ -20,12 +20,15 @@ class OrefApp extends StatelessWidget {
     // (MaterialApp) This widget returns (wrapper for) your entire app. Adding () after widget calls the constructor function of the class, meaning that we now have a new object. With Dart, you don't need the 'new' keyword. //Scaffold is a new page in your app
     //  return MaterialApp(home: Scaffold(appBar: AppBar(title: Text('Oref'),),),);
     return MaterialApp(
+      theme: ThemeData(
+          brightness: Brightness.light,
+          primarySwatch: Colors.deepOrange,
+          accentColor: Colors.deepPurple),
       home: Scaffold(
           appBar: AppBar(
             title: Text('Oref'),
           ),
-          
-          body: BonesManager(),
+          body: Center(child: BonesManager(startingBone: 'Bone Tester')),
           ),
     );
   }

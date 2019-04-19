@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 
 class Bones extends StatelessWidget {
 //final keyword tells dart this this variable is unchangeable. It is declared once and immutable. Will work without it, but best practice to define the type.
-  //This stores the passed in data 'bones' from the constructor as a variable. Like De-structuring.
+  //This stores the passed in data 'bones' from the constructor as a variable. Like De-structuring. 'Bones' is a prop passed down from BonesManager like this (Bones(_bones))
   final List<String> bones;
 
   //This is a constructor. This is like props passed. Does the '.this' keyword have the context of the OrefAppState class from main.dart?
-  Bones(this.bones);
+  Bones(this.bones) {
+    print('Bones Widget Constructor');
+  }
 
   @override
   Widget build(BuildContext context) {
+    print('[Bones Widget] build()');
     return Column(
       children: bones
           .map((el) => Card(
