@@ -7,7 +7,7 @@ class Bones extends StatelessWidget {
 
   //This is a constructor. This is like props passed. Does the '.this' keyword have the context of the OrefAppState class from main.dart?
   Bones(this.bones) {
-    print('Bones Widget Constructor');
+    
   }
 
   @override
